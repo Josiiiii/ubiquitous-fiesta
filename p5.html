@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"
+        integrity="sha512-d6sc8kbZEtA2LwB9m/ck0FhvyUwVfdmvTeyJRprmj7Wg9wRFtHDIpr6qk4g/y3Ix3O9I6KHIv6SGu9f7RaP1Gw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+
+</body>
+<script>
+    // let i=10
+    // function setup() {
+    //     createCanvas(400, 400);
+        
+    // }
+    
+    // function draw() {
+    //     i=i+1
+    //     background(220);
+    //     ellipse(mouseX,mouseY,10, 40);
+
+    //     // circle(mouseX,mouseY,10)
+    //     // circle(50+i, 100+Math.sin(i/15)*50, 25);
+    // }
+    let isLit = false;
+
+function setup() {
+  createCanvas(750,750, WEBGL);
+
+  describe('A sphere drawn against a gray background. The sphere appears to change color when the user double-clicks.');
+}
+
+function draw() {
+  background(200);
+  let c = color("#40E0D0");
+  ambientLight(c);
+
+  // Enable orbiting with the mouse.
+  orbitControl();
+
+  // Control the light.
+  if (isLit === true) {
+    // Use a grayscale value of 80.
+    ambientLight(80);
+  }
+
+  // Draw the sphere.
+  sphere(300);
+
+}
+
+// Turn on the ambient light when the user double-clicks.
+function doubleClicked() {
+  isLit = true;
+
+
+}
+</script>
+
+</html>
