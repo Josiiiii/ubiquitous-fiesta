@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="inp1"/>
+    <input  id="inp2"/>
+    <input  id="inp3"/>
+    <button onclick="write_Text()">Calculate</button>
+    <h1 id="printer"></h1>
+</body>
+<script>
+   
+let x =10
+
+const inp1=document.getElementById('inp1')
+const inp2=document.getElementById('inp2')
+const inp3=document.getElementById('inp3')
+const printer=document.getElementById('printer')
+
+// console.log(x+y)
+
+
+function write_Text(){
+    printer.innerText=(parseInt(inp1.value)+parseInt(inp2.value))*parseInt(inp3.value)}
+</script>
+</html>
